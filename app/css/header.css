@@ -1,7 +1,7 @@
 body {
   position: relative;
-  font: 18px/24px "Roboto", sans-serif;
-  color: #7b7b7b;
+  font: 18px/24px "Raleway", sans-serif;
+  color: #000;
   background-color: #fff; }
 
 body.unscroll {
@@ -74,7 +74,7 @@ body.unscroll {
   height: 60px;
   background-color: #1988cc;
   color: #000;
-  font: 20px "Roboto", sans-serif;
+  font: 20px "Raleway", sans-serif;
   text-transform: uppercase; }
 
 .btn:hover {
