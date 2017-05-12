@@ -3,13 +3,60 @@
 
 body {
 	position: relative;
-	font: 18px/24px $main_font;
+	font: 400 16px/24px $main_font;
 	color: $main_text_color;
-	background-color: #fff;
+	background-color: #f5f6f8;
 }
 
 body.unscroll{
 	overflow: hidden;
+}
+
+.main_wrap{
+    overflow: hidden;
+}
+
+.item--margined{
+    margin-left: 98px;
+}
+
+.header{
+    font-size: 50px;
+    line-height: 66px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.header_sm{
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.title{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: .05em;
+}
+
+.text--900{
+    font-weight: 900;
+    color: #000;
+}
+
+.text--700{
+    font-weight: 700;
+    color: #000;
+}
+
+.text--600{
+    font-weight: 600;
+    color: #000;
 }
 
 .md-modal.md-show{
@@ -79,19 +126,142 @@ body.unscroll{
 }
 
 .btn{
-	width:300px;
-	height: 60px;
-	background-color: $main_color;
+    position: relative;
+	width: 230px;
+    height: 50px;
+    box-shadow: 0 12px 43px rgba(255, 41, 96, 0.38);
+    background-color: #dd3862;
+    background-image: linear-gradient(to top, #c61b47 0%, #dd3862 100%);
 
-	color: #000;
-	font: 20px $main_font;
+	color: #fff;
+	font: 700 12px $main_font;
+    letter-spacing: .1em;
 	text-transform: uppercase;
+    z-index: 3;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+        background-color: #dd3862;
+        background-image: linear-gradient(to top, #9053e6 0%, #bf91ff 100%);
+        z-index: 1;
+
+        transition: .3s;
+        opacity: 0;
+    }
+    span{
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .btn:hover{
-	background-color: $second_color;
+	background-color: $main_color;
+    box-shadow: none;
+    &:before{
+        opacity: 1;
+    }
 }
 
 .btn:active{
-	background-color: #edcc00;
+    box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+    background-color: #762bc6;
+    background-image: none;
+    &:before{
+        opacity: 0;
+    }
+}
+
+
+.call_btn_btm{
+    width: 181px;
+    height: 40px;
+    border: 2px solid #f2f2f6;
+    font-size: 12px;
+    letter-spacing: .05em;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    &:hover{
+        border: 3px solid #7f58e9;
+        color: $main_color;
+    }
+    &:active{
+        background-color: #5f37ca;
+        color: #fff;
+    }
+}
+
+
+.call{
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  float: right;
+  &:hover{
+    color: #dc3761;
+  }
+}
+.call:before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  bottom: -6px;
+  transition: all .4s;
+  background: #dd3862;
+}
+
+
+#sec_01{
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(../img/sec_01-bg.png);
+
+    padding: 40px 0 270px;
+    color: #000;
+
+    .call_block{
+        float: right;
+    }
+    .tel{
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 25px;
+        margin-right: 30px;
+        font-family: $number_font;
+        &:hover{color: $main_color;}
+    }
+    .logo{
+        margin-top: -40px;
+    }
+    .top{margin-bottom: 210px;}
+    .header_main{
+        color: #ffffff;
+        font-size: 90px;
+        line-height: 113px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    .underheader{
+        color: #ffffff;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+    }
+    .btn{
+        margin-top: 50px;
+    }
 }

@@ -2,7 +2,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 900;
-  src: url("fonts/Raleway-Black.woff2") format("woff2"), url("fonts/Raleway-Black.woff") format("woff"); }
+  src: url("fonts/Raleway-Black.woff") format("woff"); }
 
 @font-face {
   font-family: "Raleway";

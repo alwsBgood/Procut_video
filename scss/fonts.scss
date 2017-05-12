@@ -1,6 +1,6 @@
 @import "bourbon";
 
-@include font-face("Raleway", "fonts/Raleway-Black", 900, $file-formats: woff woff2);
+@include font-face("Raleway", "fonts/Raleway-Black", 900, $file-formats: woff);
 
 @include font-face("Raleway", "fonts/Raleway-ExtraBold", 700, $file-formats: woff woff2);
 
