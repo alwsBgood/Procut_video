@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  src: url("fonts/Raleway-Black.woff") format("woff"); }
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/Raleway-ExtraBold.woff2") format("woff2"), url("fonts/Raleway-ExtraBold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/Raleway-Bold.woff2") format("woff2"), url("fonts/Raleway-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/Raleway-Medium.woff2") format("woff2"), url("fonts/Raleway-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Raleway-Regular.woff2") format("woff2"), url("fonts/Raleway-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "DidactGothic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/DidactGothic.woff2") format("woff2"), url("fonts/DidactGothic.woff") format("woff"); }

@@ -1,0 +1,247 @@
+body {
+  position: relative;
+  font: 400 16px/24px "Raleway", sans-serif;
+  color: #848586;
+  background-color: #f5f6f8; }
+
+body.unscroll {
+  overflow: hidden; }
+
+.main_wrap {
+  overflow: hidden; }
+
+.item--margined {
+  margin-left: 98px; }
+
+.header {
+  font-size: 50px;
+  line-height: 66px;
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase; }
+
+.header_sm {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase; }
+
+.title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: .05em; }
+
+.text--900 {
+  font-weight: 900;
+  color: #000; }
+
+.text--700 {
+  font-weight: 700;
+  color: #000; }
+
+.text--600 {
+  font-weight: 600;
+  color: #000; }
+
+.md-modal.md-show {
+  opacity: 1; }
+
+.md-modal {
+  opacity: 0; }
+
+/* SCROLL BAR STYLES*/
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3); }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background: #9053e6;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #9053e6; }
+
+/* BUTTON scrollUP SYLES*/
+#scrollup {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  width: 30px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  display: none;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 40px;
+  text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  #scrollup svg {
+    fill: #848484;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+
+#scrollup:hover svg {
+  fill: #9053e6; }
+
+.hidden {
+  height: 0;
+  width: 0; }
+
+.bar-long {
+  height: 5px;
+  width: 0;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #9053e6; }
+
+.btn {
+  position: relative;
+  width: 230px;
+  height: 50px;
+  -webkit-box-shadow: 0 12px 43px rgba(255, 41, 96, 0.38);
+  box-shadow: 0 12px 43px rgba(255, 41, 96, 0.38);
+  background-color: #dd3862;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#c61b47), to(#dd3862));
+  background-image: -webkit-linear-gradient(bottom, #c61b47 0%, #dd3862 100%);
+  background-image: linear-gradient(to top, #c61b47 0%, #dd3862 100%);
+  color: #fff;
+  font: 700 12px "Raleway", sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  z-index: 3; }
+  .btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+    box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+    background-color: #dd3862;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#9053e6), to(#bf91ff));
+    background-image: -webkit-linear-gradient(bottom, #9053e6 0%, #bf91ff 100%);
+    background-image: linear-gradient(to top, #9053e6 0%, #bf91ff 100%);
+    z-index: 1;
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 0; }
+  .btn span {
+    position: relative;
+    z-index: 2; }
+
+.btn:hover {
+  background-color: #9053e6;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .btn:hover:before {
+    opacity: 1; }
+
+.btn:active {
+  -webkit-box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+  box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+  background-color: #762bc6;
+  background-image: none; }
+  .btn:active:before {
+    opacity: 0; }
+
+#sec_01 {
+  background-repeat: no-repeat;
+  background-position: top 200px center;
+  background-image: url(../img/bg.png);
+  position: relative;
+  padding: 200px 0 185px;
+  min-height: 100vh;
+  text-align: center; }
+  #sec_01 .logo {
+    margin-bottom: 90px; }
+  #sec_01 .header_main {
+    font-size: 72px;
+    margin-bottom: 40px; }
+  #sec_01 .btn {
+    margin: 40px auto 70px; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 15px 0 15px;
+  background-color: #202020; }
+  footer .politics {
+    margin-top: 13px; }
+    footer .politics a {
+      color: #65666a;
+      font-size: 15px; }
+    footer .politics a:hover {
+      color: #9053e6; }
+    footer .politics a + a {
+      margin-left: 10px; }
+  footer .logo_rezart {
+    margin-top: 3px;
+    margin-left: 0px;
+    width: 48px;
+    float: right; }
+    footer .logo_rezart svg {
+      fill: #fff;
+      -webkit-transition: fill .3s;
+      transition: fill .3s; }
+    footer .logo_rezart:hover svg {
+      fill: #9053e6; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .politics a {
+    font-size: 13px; } }
+
+@media screen and (max-height: 760px) {
+  .md_large .md_content {
+    max-height: 320px; } }
+
+@media (max-width: 767px) {
+  #sec_01 {
+    padding-top: 100px;
+    background-position: top -150px center; }
+  footer {
+    text-align: center; }
+    footer [class*='col-'] {
+      width: 100%; }
+    footer .politics a {
+      font-size: 14px;
+      display: block;
+      text-align: center; }
+    footer .politics a + a {
+      margin-left: 0; }
+    footer .logo_rezart {
+      display: inline-block;
+      float: none;
+      margin-top: 10px;
+      margin-left: 0; }
+  div[id*='modal_politics'] h2 {
+    padding-top: 70px; }
+  div[id*='modal_politics'] .btn_close_modal {
+    top: 20px; } }
+
+@media (max-width: 600px) {
+  [class*='col-'] {
+    width: 100%; }
+  #sec_01 {
+    padding-top: 20px;
+    background-position: top -150px center; }
+    #sec_01 .logo {
+      margin-bottom: 70px; }
+    #sec_01 .header_main {
+      font-size: 46px; } }

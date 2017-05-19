@@ -1,7 +1,16 @@
 if (localStorage.name && localStorage.email && localStorage.phone) {
-  $('input[name="name"]').val(localStorage.name);
+  $('input[name="entry.397525899"]').val(localStorage.name);
   $('input[type="email"]').val(localStorage.email);
   $('input[type="tel"]').val(localStorage.phone);
+}
+
+function get_cookie ( cookie_name ){
+  var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+
+  if ( results )
+    return ( unescape ( results[2] ) );
+  else
+    return null;
 }
 
 $(function() {
@@ -18,7 +27,7 @@ $(function() {
     var send_options = btn.closest('form').find('[name=campaign_token]');
     var gd_send_adress = btn.closest('form').find('[name=gd_send_adress]').val();
 
-    localStorage.name = form.find('input[name="name"]').val();
+    localStorage.name = form.find('input[name="entry.397525899"]').val();
     localStorage.email = form.find('input[type="email"]').val();
     localStorage.phone = form.find('input[type="tel"]').val();
 
@@ -131,12 +140,12 @@ $(function() {
         success: function() {
           console.log('amo ok!');
           form.find('.spinner').fadeOut();
-          dataLayer.push({'event': 'FormSubmit', 'form_type': data_form});
+          // dataLayer.push({'event': 'FormSubmit', 'form_type': data_form});
           setTimeout(function() {
             form.find('button').text('✔ Отправлено');
           }, 350);
            setTimeout(function() {
-              window.location = "http://procut.com.ua/event/mk-montage/success/"
+              window.location = "http://procut.com.ua/videomaking/success/"
           }, 1500);
         }
       });
@@ -159,7 +168,7 @@ $(function() {
 //  INPUT TEL MASK
 
 jQuery(function($){
- $("input[type='tel']").mask("+9 (999) 999-9999");
+ $("input[type='tel']").mask("+38 (099) 999-9999");
 });
 
 
@@ -239,6 +248,7 @@ $(document).ready(function() {
     arrows: true,
     fade: true,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     customPaging : function(slider, i) {
       var thumb = $(slider.$slides[i]).data();
       return '<a>0' + (i+1) + '</a>';
@@ -274,47 +284,139 @@ $(document).ready(function() {
 });
 
 
-// Perfect Pxel
+// Lines move
 
-$('body').each(function() {
-  var body = $(this);
-  var img_url = $(this).data('img');
-  var img = new Image();
-  img.src = img_url;
-  img.onload = function(){
-    var ppbox = '<div id="pp" style="background: url('+img_url+') no-repeat 50% 0%;top:0;width:100%;position:absolute;z-index:1000000;opacity:0.5;height:'+img.height+'px"></div>';
-    var ppbtn = '<button onclick="myOff()" id="ppbtn" style="position:fixed;top:0;right:0;z-index:1000001">ON</button>'
-    body.append(ppbox);
-    body.append(ppbtn);
-  };
+$('body').mousemove(function( e ) {
+  var y = e.pageY;
+  $('.line').css({
+    willchange: 'transform',
+    transform: 'translate(0, ' + y + 'px)'
+  });;
+  if(y>950){
+    $('.line').addClass('purple');
+  } else{
+    $('.line').removeClass('purple');
+  }
 });
-function myOff() {
-  var ppbtntext = $('#ppbtn').text();
-  if (ppbtntext == 'ON') {
-    $('#ppbtn').text('OFF');
-    $('#pp').css('display', 'none');
+
+
+// Menu
+
+$(window).scroll(function(){
+  if ( $(document).scrollTop() > 350 && $(document).width() > 1200) {
+    $('.menu').fadeIn('slow');
   } else {
-    $('#ppbtn').text('ON');
-    $('#pp')        .css({
-      ' z-index' : '1000000',
-      display: 'block'
-    });
-
-  }
-}
-
-$('html').keydown(function(){
-  var ppbtntext = $('#ppbtn').text();
-  if (event.keyCode == 81) {
-    if (ppbtntext == 'ON') {
-      $('#ppbtn').text('OFF');
-      $('#pp').css('display', 'none');
-    } else {
-      $('#ppbtn').text('ON');
-      $('#pp')        .css({
-        ' z-index' : '1000000',
-        display: 'block'
-      });
-    }
+    $('.menu').fadeOut('slow');
   }
 });
+
+  // waypoint
+
+$('#sec_01').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(1)").addClass('active');
+  },
+  {offset: "-10px"}
+);
+
+$('#sec_02').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(2)").addClass('active');
+    $("nav ul p").addClass('visible');
+    setTimeout(function() {
+      $("nav ul p").removeClass('visible');
+      $('.menu').css('opacity', '.4');
+    }, 3000);
+  },
+  {offset: "100px"}
+);
+
+$('#sec_03').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(3)").addClass('active');
+  },
+  {offset: "500px"}
+);
+
+$('#sec_04').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(4)").addClass('active');
+  },
+  {offset: "400px"}
+);
+
+$('#sec_05').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(5)").addClass('active');
+  },
+  {offset: "400px"}
+);
+
+$('#sec_06').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(6)").addClass('active');
+  },
+  {offset: "400px"}
+);
+
+$('#sec_07').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(7)").addClass('active');
+  },
+  {offset: "400px"}
+);
+
+$('#sec_08').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(8)").addClass('active');
+  },
+  {offset: "400px"}
+);
+
+$('#sec_09').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(9)").addClass('active');
+  },
+  {offset: "400px"}
+);
+
+$('#sec_10').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(10)").addClass('active');
+  },
+  {offset: "1400px"}
+);
+
+$('#sec_11').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(11)").addClass('active');
+  },
+  {offset: "1500px"}
+);
+
+$('#sec_12').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(12)").addClass('active');
+  },
+  {offset: "1600px"}
+);
+
+$('#sec_13').waypoint(
+  function() {
+    $("nav ul li").removeClass('active');
+    $("nav ul li:nth-child(13)").addClass('active');
+  },
+  {offset: "1700px"}
+);

@@ -115,6 +115,7 @@
 
 #sec_06{
   padding: 110px 0 100px;
+  .mobile{display: none}
   .item{margin-top: 27px;}
   .title{margin-bottom: 10px;}
   .header{
@@ -139,7 +140,7 @@
 
 #sec_07{
   padding: 85px 0;
-  .sec_img{
+  video{
     float: right;
     width: 849px;
     height: 460px;
@@ -283,7 +284,7 @@
     width: 210px;
     margin-top: 35px;
   }
-  .sec_img{
+  video{
     width: 846px;
     height: 460px;
   }
@@ -376,7 +377,7 @@
 }
 
 #sec_13{
-  padding: 70px 0 200px;
+  padding: 70px 0 140px;
   .container{position: relative;}
   .paralax_letter{
     left: 90px;
@@ -415,7 +416,7 @@
 
 #sec_14{
   background-color: #333333;
-  padding: 100px 0 85px;
+  padding: 80px 0 65px;
   .social{
     margin-top: 60px;
     li{

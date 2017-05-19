@@ -1,0 +1,290 @@
+@import "bourbon";
+@import "vars.scss";
+
+body {
+	position: relative;
+	font: 400 16px/24px $main_font;
+	color: $main_text_color;
+	background-color: #f5f6f8;
+}
+
+body.unscroll{
+	overflow: hidden;
+}
+
+.main_wrap{
+    overflow: hidden;
+}
+
+.item--margined{
+    margin-left: 98px;
+}
+
+.header{
+    font-size: 50px;
+    line-height: 66px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.header_sm{
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.title{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: .05em;
+}
+
+.text--900{
+    font-weight: 900;
+    color: #000;
+}
+
+.text--700{
+    font-weight: 700;
+    color: #000;
+}
+
+.text--600{
+    font-weight: 600;
+    color: #000;
+}
+
+.md-modal.md-show{
+    opacity: 1;
+  }
+.md-modal{
+    opacity: 0;
+  }
+
+/* SCROLL BAR STYLES*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+ /* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,  0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: $main_color;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: $main_color;
+}
+
+/* BUTTON scrollUP SYLES*/
+
+#scrollup {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    width: 30px;
+    transform: rotate(180deg);
+    display: none;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 40px;
+    text-shadow: -2px 2px 5px rgba(0,0,0, 0.3);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    svg{
+      fill: #848484;
+      transition: all 0.5s;
+    }
+}
+
+#scrollup:hover{
+  svg{fill: $main_color;}
+}
+
+.hidden{
+    height: 0;
+    width: 0;
+}
+.bar-long {
+	height: 5px;
+	width: 0;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: $main_color;
+}
+
+.btn{
+    position: relative;
+    width: 230px;
+    height: 50px;
+    box-shadow: 0 12px 43px rgba(255, 41, 96, 0.38);
+    background-color: #dd3862;
+    background-image: linear-gradient(to top, #c61b47 0%, #dd3862 100%);
+
+	color: #fff;
+	font: 700 12px $main_font;
+    letter-spacing: .1em;
+	text-transform: uppercase;
+    z-index: 3;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+        background-color: #dd3862;
+        background-image: linear-gradient(to top, #9053e6 0%, #bf91ff 100%);
+        z-index: 1;
+
+        transition: .3s;
+        opacity: 0;
+    }
+    span{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.btn:hover{
+	background-color: $main_color;
+    box-shadow: none;
+    &:before{
+        opacity: 1;
+    }
+}
+
+.btn:active{
+    box-shadow: 0 12px 43px rgba(166, 103, 255, 0.38);
+    background-color: #762bc6;
+    background-image: none;
+    &:before{
+        opacity: 0;
+    }
+}
+
+#sec_01{
+  background-repeat: no-repeat;
+  background-position: top 200px center;
+  background-image: url(../img/bg.png);
+  position: relative;
+  padding: 200px 0 185px;
+
+  min-height: 100vh;
+  text-align: center;
+
+  .logo{margin-bottom: 90px;}
+  .header_main{
+    font-size: 72px;
+    margin-bottom: 40px;
+  }
+  .btn{
+    margin: 40px auto 70px;
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 15px 0 15px;
+  background-color: #202020;
+  .politics{
+    margin-top: 13px;
+    a{
+      color: #65666a;
+      font-size: 15px;
+    }
+    a:hover{color: $main_color;}
+    a+a{margin-left: 10px;}
+  }
+  .logo_rezart{
+    margin-top: 3px;
+    margin-left: 0px;
+    width: 48px;
+    // margin-right: 20px;
+    float: right;
+    svg{
+      fill: #fff;
+      transition: fill .3s;
+    }
+    &:hover{
+      svg{
+        fill: $main_color;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  footer{
+    .politics a{
+      font-size: 13px;
+    }
+  }
+}
+
+
+@media screen and (max-height: 760px){
+  .md_large .md_content {max-height: 320px;}
+}
+
+@media (max-width: 767px) {
+  #sec_01{
+    padding-top: 100px;
+    background-position: top -150px center;
+  }
+
+  footer{
+    text-align: center;
+    [class*='col-']{width: 100%;}
+    .politics{
+      a{
+         font-size: 14px;
+         display: block;
+         text-align: center;
+       }
+     a+a{margin-left: 0 }
+    }
+    .logo_rezart{
+      display: inline-block;
+      float: none;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+  div[id*='modal_politics']{
+    h2{padding-top: 70px;}
+    .btn_close_modal{
+      top: 20px;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  [class*='col-']{width: 100%;}
+  #sec_01{
+    padding-top: 20px;
+    background-position: top -150px center;
+    .logo{margin-bottom: 70px;}
+    .header_main{
+      font-size: 46px;
+    }
+  }
+}
