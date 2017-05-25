@@ -76,7 +76,11 @@ $(function() {
       $(send_btn).each(function() {
         $(this).attr('disabled', true);
       });
-      var loc = ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country;
+      // var loc = ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country;
+
+      $.get("http://ipinfo.io", function(response) {
+       $('.geoloc').val(response.city + ', ' + response.country)
+      }, "jsonp");
 
       var ga = get_cookie('_ga');
       if (ga === null) {
@@ -86,7 +90,7 @@ $(function() {
         cook_ga = "&_ga="+get_cookie('_ga');
         var hmid = cook_ga.split('.')[2]+'.'+cook_ga.split('.')[3];
       }
-      form.find('.geoloc').val(loc);
+      // form.find('.geoloc').val(loc);
       var data = form.serialize();
       var data_form = form.attr('data-form');
       var temp_date = new Date();
