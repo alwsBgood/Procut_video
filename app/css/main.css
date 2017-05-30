@@ -1,5 +1,16 @@
 @import url(../libs/niftymodal/component.css);
 @import url(../libs/slick/slick.min.css);
+.date, .cost {
+  font-size: 16px;
+  color: #000;
+  line-height: 28px;
+  font-weight: 700; }
+  .date span, .cost span {
+    color: #9053e6; }
+
+.date {
+  margin-top: 20px; }
+
 .paralax_letter {
   position: absolute;
   color: #9053e6;

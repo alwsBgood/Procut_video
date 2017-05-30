@@ -3,6 +3,18 @@
 
 //Custom Styles Here
 
+.date, .cost{
+  font-size: 16px;
+  color: #000;
+  line-height: 28px;
+  font-weight: 700;
+  span{
+    color: $main_color;
+    }
+}
+
+.date{margin-top: 20px;;}
+
 .paralax_letter{
   position: absolute;
   color: #9053e6;

@@ -289,6 +289,13 @@ body.unscroll {
       color: #9053e6; }
   #sec_01 .logo {
     margin-top: -40px; }
+  #sec_01 .date {
+    color: #fff;
+    display: inline-block;
+    margin-left: 40px;
+    vertical-align: top;
+    margin-top: 0px;
+    font-weight: 500; }
   #sec_01 .top {
     margin-bottom: 210px; }
   #sec_01 .header_main {
@@ -351,6 +358,8 @@ body.unscroll {
     padding-bottom: 140px; }
     #sec_01 .top {
       margin-bottom: 120px; }
+    #sec_01 .date {
+      display: none; }
     #sec_01 .menu {
       display: none !important; } }
 

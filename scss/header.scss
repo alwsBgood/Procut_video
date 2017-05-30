@@ -328,6 +328,14 @@ body.unscroll{
     .logo{
         margin-top: -40px;
     }
+    .date{
+        color: #fff;
+        display: inline-block;
+        margin-left: 40px;
+        vertical-align: top;
+        margin-top: 0px;
+        font-weight: 500;
+    }
     .top{margin-bottom: 210px;}
     .header_main{
         color: #ffffff;
@@ -397,6 +405,7 @@ body.unscroll{
     #sec_01{
         padding-bottom: 140px;
         .top{margin-bottom: 120px;}
+        .date{display: none;}
         .menu{display: none !important;}
     }
 }
