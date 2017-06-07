@@ -171,9 +171,9 @@ $(function() {
 
 //  INPUT TEL MASK
 
-jQuery(function($){
- $("input[type='tel']").mask("+38 (099) 999-9999");
-});
+// jQuery(function($){
+//  $("input[type='tel']").mask("+38 (099) 999-9999");
+// });
 
 
 // Scroll BAR
